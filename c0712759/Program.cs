@@ -18,13 +18,16 @@ namespace c0712759
         {
             Program p = new Program();
             p.Beowulf = new ArrayList();
+            p.ReadTextFiles();
+            Console.ReadLine();
+
         }
         public void Run() { this.ReadTextFiles(); }
         
             public void ReadTextFiles()
         {
             // Read file using StreamReader. Read file line by line
-            using (StreamReader file = new StreamReader("C:/area51/beowulf.txt"))
+            using (StreamReader file = new StreamReader("U:/Users/712759/New folder (2)/c0712759/beowulf.txt"))
 
             {
                 int counter = 0;
@@ -37,7 +40,7 @@ namespace c0712759
 
                 }
                 file.Close();
-                Console.WriteLine("File has {contour) lines.");
+                Console.WriteLine($"File has {counter} lines.");
             }
         }
         public int FindNumberOfBlankSpaces(string line)
